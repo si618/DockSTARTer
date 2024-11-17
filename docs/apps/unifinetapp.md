@@ -13,30 +13,10 @@ deployments requiring low latency and high uptime performance.
 ## Install/Setup
 
 This container requires a [mongodb instance](https://docs.linuxserver.io/images/docker-unifi-network-application/#setting-up-your-external-database) 
-that is not included in DockSTARTer. You can add mongodb to your override
-using the example below.
+which is included in DockSTARTer but [requires configuration](https://github.com/jacobalberty/unifi-docker?tab=readme-ov-file#setting-up-running-stopping-upgrading).
 
-### Example Docker Compose Override
-
-```yaml
-services:
-  mongo:
-    image: docker.io/mongo:4.4
-    container_name: mongo
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=
-      - MONGO_USER=unifi
-      - MONGO_PASS=
-      - MONGO_DBNAME=unifi
-      - MONGO_AUTHSOURCE=admin
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ${DOCKER_VOLUME_CONFIG}/mongo:/data/configdb
-      - ${DOCKER_VOLUME_CONFIG}/mongo/db:/data/db
-      #TODO - /path/to/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
-    restart: unless-stopped
-```
+The default volume mount follows the suggested `~/unifi` location, so if you
+mount elsewhere update variable `UNIFINETAPP_VOLUME_STORAGE` to suit.
 
 ### Common Issue: Devices Get Stuck In "Adopting" State
 

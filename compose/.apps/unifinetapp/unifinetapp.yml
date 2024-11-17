@@ -5,17 +5,12 @@ services:
       - PGID=${PGID}
       - PUID=${PUID}
       - TZ=${TZ}
-      - MONGO_USER=unifi
-      - MONGO_PASS=
-      - MONGO_HOST=mongo
-      - MONGO_PORT=27017
-      - MONGO_DBNAME=unifi
-      - MONGO_AUTHSOURCE=admin
-      - MEM_LIMIT=1024 #optional
-      - MEM_STARTUP=1024 #optional
-      - MONGO_TLS= #optional
+      - USER=unifi
+      - NAME=unifi
+      - LOTSOFDEVICES=${UNIFINETAPP_LOTS_OF_DEVICES}
     restart: ${UNIFINETAPP_RESTART}
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${DOCKER_VOLUME_CONFIG}/unifinetapp:/config
       - ${DOCKER_VOLUME_STORAGE}:/storage
+      - ${UNIFINETAPP_VOLUME_STORAGE}:/unifi

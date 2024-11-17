@@ -6,6 +6,7 @@ services:
       com.dockstarter.appinfo.nicename: "UnifiNetApp"
       com.dockstarter.appvars.unifinetapp_container_name: "unifinetapp"
       com.dockstarter.appvars.unifinetapp_enabled: "false"
+      com.dockstarter.appvars.unifinetapp_lots_of_devices: "false"
       com.dockstarter.appvars.unifinetapp_network_mode: ""
       com.dockstarter.appvars.unifinetapp_port_10001: "10001"
       com.dockstarter.appvars.unifinetapp_port_3478: "3478"
@@ -17,3 +18,4 @@ services:
       com.dockstarter.appvars.unifinetapp_port_8880: "8880"
       com.dockstarter.appvars.unifinetapp_restart: "unless-stopped"
       com.dockstarter.appvars.unifinetapp_tag: "latest"
+      com.dockstarter.appvars.unifinetapp_volume_storage: "~/unifi"
