@@ -86,6 +86,7 @@ plugins:
         apps/sickrage.md: https://dockstarter.com/apps/sickchill/
         apps/ttrss.md: https://dockstarter.com/apps/freshrss/
         apps/unifi.md: https://dockstarter.com/apps/unificontroller/
+        apps/unificontroller.md: https://dockstarter.com/apps/unifinetapp/
         apps/vaultwarden.md: https://dockstarter.com/apps/bitwarden/
         discord.md: https://discord.gg/xR3cyUb
         overrides/fireflyiii.md: https://dockstarter.com/apps/fireflyiii/
@@ -261,6 +262,7 @@ nav:
       - apps/tvheadend.md
       - apps/ubooquity.md
       - apps/unificontroller.md
+      - apps/unifinetapp.md
       - apps/unmanic.md
       - apps/unpackerr.md
       - apps/uptimekuma.md

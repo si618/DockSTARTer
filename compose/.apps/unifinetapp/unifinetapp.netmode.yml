@@ -1,0 +1,3 @@
+services:
+  unifinetapp:
+    network_mode: ${UNIFINETAPP_NETWORK_MODE}

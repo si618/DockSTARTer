@@ -1,0 +1,21 @@
+services:
+  unifinetapp:
+    container_name: ${UNIFINETAPP_CONTAINER_NAME}
+    environment:
+      - PGID=${PGID}
+      - PUID=${PUID}
+      - TZ=${TZ}
+      - MONGO_USER=unifi
+      - MONGO_PASS=
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - MONGO_DBNAME=unifi
+      - MONGO_AUTHSOURCE=admin
+      - MEM_LIMIT=1024 #optional
+      - MEM_STARTUP=1024 #optional
+      - MONGO_TLS= #optional
+    restart: ${UNIFINETAPP_RESTART}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${DOCKER_VOLUME_CONFIG}/unifinetapp:/config
+      - ${DOCKER_VOLUME_STORAGE}:/storage
